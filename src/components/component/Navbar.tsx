@@ -7,9 +7,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRef } from 'react'
 import { twMerge } from 'tailwind-merge'
-type Props = {}
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
     const pathname = usePathname()
     const newClasses = pathname !== "/" ? "bg-primary relative" : "";
     const consultNavRef = useRef(null)
@@ -20,8 +19,8 @@ const Navbar = (props: Props) => {
                 duration: 1,
                 delay: 1,
                 repeat: -1,
-                border: '4px solid #FFB86C',
-                color: '#FFB86C',
+                border: '4px solid #48bb78',
+                color: '#48bb78',
                 ease: "power1.inOut",
                 yoyo: true,
             });
@@ -42,7 +41,7 @@ const Navbar = (props: Props) => {
                 </nav>
                 <Button variant={'secondary'} className='w-48 ' ref={consultNavRef}>
                     <Link href="/#contact" className="text-sm font-medium text-center" prefetch={false}>
-                        Contact for Consultancy
+                        Get Consulted
                     </Link>
                 </Button>
             </div>

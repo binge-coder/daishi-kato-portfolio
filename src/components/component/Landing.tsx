@@ -72,7 +72,7 @@ export function Landing() {
               Daishi Kato
             </h1>
             <p className="mt-3 text-xl text-primary-foreground sm:mt-5 sm:text-2xl sm:px-32 md:px-72">
-            React library author, maintaining three state management libraries, <Link href='https://zustand-demo.pmnd.rs/' className="startLink">Zustand</Link>, <Link href='https://jotai.org/' className="startLink">Jotai</Link>, <Link href='https://valtio.dev/' className="startLink">Valtio</Link>, and React Server Components framework, <Link href='https://waku.gg/' className="startLink">Waku</Link>.
+            React library author, maintaining three state management libraries, <Link href='https://zustand-demo.pmnd.rs/' className="startLink" target="_blank">Zustand</Link>, <Link href='https://jotai.org/' className="startLink" target="_blank">Jotai</Link>, <Link href='https://valtio.dev/' className="startLink" target="_blank">Valtio</Link>, and React Server Components framework, <Link href='https://waku.gg/' className="startLink" target="_blank">Waku</Link>.
             </p>
           </div>
           <div ref={arrowRef} className="absolute bottom-9" onClick={pageDown}>
