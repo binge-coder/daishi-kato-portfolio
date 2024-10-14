@@ -19,8 +19,8 @@ const Navbar = () => {
                 duration: 1,
                 delay: 1,
                 repeat: -1,
-                border: '4px solid #48bb78',
-                color: '#48bb78',
+                border: '4px solid #2196F3',
+                color: '#2196F3',
                 ease: "power1.inOut",
                 yoyo: true,
             });

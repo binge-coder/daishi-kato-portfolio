@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/component/Navbar";
 import Footer from "@/components/component/Footer";
-import { Inter, Fira_Code } from 'next/font/google'
+import { Inter, Fira_Code, Fraunces, Comfortaa } from 'next/font/google'
 
 // const geistSans = localFont({
 //   src: "./../../public/fonts/GeistVF.woff",
@@ -22,7 +22,15 @@ import { Inter, Fira_Code } from 'next/font/google'
 //   weight: "100 900",
 // });
 
-const inter = Fira_Code({ subsets: ['latin'] })
+// const comfortaa = Comfortaa({ 
+//   subsets: ['latin'],
+//   variable: '--font-comfortaa',
+// })
+
+const fraunces = Fraunces({ 
+  subsets: ['latin'],
+  variable: '--font-fraunces',
+})
 
 export const metadata: Metadata = {
   title: "Daishi Kato",
@@ -37,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased overflow-x-hidden ${inter.className}`}
+        className={`antialiased overflow-x-hidden ${fraunces.className}`}
       >
         <div className="flex min-h-[100dvh] flex-col">
           <Navbar />
