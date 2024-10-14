@@ -1,0 +1,14 @@
+[
+  { "name": "Book", "href": "https://www.amazon.co.jp/Micro-State-Management-React-Hooks/dp/1801812373" },
+  { "name": "Blog", "href": "https://blog.axlight.com" },
+  { "name": "GitHub", "href": "https://github.com/dai-shi" },
+  { "name": "Twitter", "href": "https://twitter.com/dai_shi" },
+  { "name": "Discord", "href": "https://discord.gg/MrQdmzd" },
+  { "name": "Mastodon", "href": "https://fosstodon.org/@daishi" },
+  { "name": "Instagram", "href": "https://www.instagram.com/daishi.reactfan" },
+  { "name": "Threads", "href": "https://www.threads.net/@daishi.reactfan" },
+  { "name": "Bluesky", "href": "https://bsky.app/profile/daishikato.bsky.social" },
+  { "name": "Gumroad", "href": "https://daishi.gumroad.com/" },
+  { "name": "Egghead", "href": "https://egghead.io/q/resources-by-daishi-kato?af=egwzez" },
+  { "name": "Educative", "href": "https://www.educative.io/profile/view/6060404088242176" }
+]
