@@ -70,6 +70,18 @@
     @apply bg-primary text-primary-foreground px-1 hover:bg-secondary hover:text-secondary-foreground rounded-sm transition-colors duration-300;
   }
 }
+
+/* hiding scrollbar */
+html {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+html::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
 /* 
 body {
   font-family: var(--font-outfit);
