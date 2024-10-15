@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/component/Navbar";
 import Footer from "@/components/component/Footer";
-import { Inter, Fira_Code, Fraunces, Comfortaa } from 'next/font/google'
+// import { Inter, Fira_Code, Fraunces, Comfortaa } from 'next/font/google'
+import { Fraunces } from 'next/font/google'
+
 
 // const geistSans = localFont({
 //   src: "./../../public/fonts/GeistVF.woff",
