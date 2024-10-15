@@ -2,6 +2,10 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from './../../../public/profile-image.png';
+import valtioCode from './../../../public/valtio-code.svg';
+import zustandCode from './../../../public/zustand-code.svg';
+import jotaiCode from './../../../public/jotai-code.svg';
+import wakuCode from './../../../public/waku-code.svg';
 
 const page = () => {
   return (
@@ -29,13 +33,37 @@ const page = () => {
                 </Button>
               </div>
             </div>
-            <div className="flex items-center justify-center ">
+            <div className="flex items-center justify-center relative">
+              <Image
+                src={wakuCode}
+                alt="Waku Code"
+                width={300}
+                height={100}
+                className="absolute -right-8 hidden md:block " />
+              <Image
+                src={jotaiCode}
+                alt="Jotai Code"
+                width={300}
+                height={100}
+                className="absolute bottom-40 -right-8 hidden md:block" />
+              <Image
+                src={zustandCode}
+                alt="zustand Code"
+                width={500}
+                height={500}
+                className="absolute -right-20 -bottom-40 hidden md:block z-30" />
+              <Image
+                src={valtioCode}
+                alt="Valtio Code"
+                width={300}
+                height={100}
+                className="absolute left-0 bottom-1 hidden md:block z-30" />
               <Image
                 src={profilePic}
                 alt="Daishi Kato"
                 width={300}
                 height={100}
-                className="rounded-full shadow-lg"
+                className="rounded-full shadow-lg z-40"
               />
             </div>
 
