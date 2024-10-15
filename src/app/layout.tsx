@@ -36,7 +36,29 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: "Daishi Kato",
-  description: "Portfolio of Daishi Kato, a react library author",
+  description: "Portfolio of Daishi Kato, a leading React library author, known for developing popular state management tools like Zustand, Jotai, and Valtio, and the React Server Components framework, Waku.",
+  openGraph: {
+    title: "Daishi Kato - React Library Author",
+    description: "Explore the portfolio of Daishi Kato, known for creating Zustand, Jotai, Valtio, and Waku.",
+    url: "https://daishi-kato.vercel.app", // Your actual URL
+    images: [
+      {
+        url: "https://daishi-kato.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile-image.07b13c61.png&w=640&q=75", // Replace with your actual image path
+        width: 800,
+        height: 600,
+        alt: "Daishi Kato Image",
+      },
+    ],
+    siteName: "Daishi Kato",
+  },
+  twitter: {
+    card: "summary_large_image", // or "summary" for smaller image
+    site: "@dai_shi", // Replace with your Twitter handle (e.g., @daishi_kato)
+    creator: "@kanwarxkaran", // Replace with your Twitter handle (e.g., @daishi_kato)
+    title: "Daishi Kato - React Library Author",
+    description: "Explore the portfolio of Daishi Kato, creator of Zustand, Jotai, Valtio, and Waku.",
+    images: "https://daishi-kato.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile-image.07b13c61.png&w=640&q=75", // Your actual Twitter image path
+  }
 };
 
 export default function RootLayout({
