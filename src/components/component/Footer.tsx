@@ -21,7 +21,8 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Daishi Kato. All rights reserved.
         </p>
         <p className="text-sm text-muted-foreground mt-2">
-          Designed and developed by <Link href="https://github.com/binge-coder" className='inline-block border border-white text-white bg-blue-500 p-1 rounded-md hover:bg-blue-400' target='_blank'>
+        Website made by
+          <Link href="https://github.com/binge-coder" className='inline-block border border-white text-white bg-blue-500 p-1 rounded-md hover:bg-blue-700 ml-1' target='_blank'>
           Karan Kanwar
           </Link>
         </p>
