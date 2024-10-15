@@ -1,25 +1,5 @@
 "use client";
 
-/** Add fonts into your Next.js project:
-
-import { Fraunces } from 'next/font/google'
-import { Comfortaa } from 'next/font/google'
-
-fraunces({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-comfortaa({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-To read more about using these font, please visit the Next.js documentation:
-- App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
-- Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
-**/
-
 // import Link from "next/link"
 import { Button } from "@/components/ui/button"
 // import { Card, CardHeader, CardContent } from "@/components/ui/card"
@@ -38,6 +18,7 @@ gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
 export function Landing() {
   const arrowRef = useRef(null)
+
   useGSAP(
     () => {
       gsap.to(arrowRef.current, {
@@ -54,6 +35,17 @@ export function Landing() {
   const pageDown = () => {
     gsap.to(window, { duration: 1, scrollTo: "#contact" });
   }
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = {
+      name: formData.get('Name'),
+      email: formData.get('Email'),
+      message: formData.get('Message'),
+    };
+    console.log(data);
+  };
 
   return (
     <>
@@ -89,7 +81,7 @@ export function Landing() {
                   {`I'm always excited to connect with new people and discuss potential collaborations or projects. Feel
                   free to reach out to me using the form below, and I'll get back to you as soon as possible.`}
                 </p>
-                <form className="mt-6 space-y-4">
+                <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                   <Input type="text" name="Name" placeholder="Enter your name" className="w-full" />
                   <Input type="email" name="Email" placeholder="Enter your email" className="w-full" />
                   <Textarea name="Message" placeholder="Enter your message" className="w-full" />
