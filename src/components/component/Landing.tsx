@@ -12,6 +12,7 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from "react";
 import { ScrollToPlugin } from "gsap/all";
 import Link from "next/link";
+import { Toaster, toast } from 'sonner'
 
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
@@ -36,7 +37,7 @@ export function Landing() {
     gsap.to(window, { duration: 1, scrollTo: "#contact" });
   }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const data = {
@@ -44,11 +45,35 @@ export function Landing() {
       email: formData.get('Email'),
       message: formData.get('Message'),
     };
-    console.log(data);
+  
+    try {
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+  
+      if (response.ok) {
+        console.log('Email sent successfully');
+        // Show success message to user
+        toast.success('Email sent successfully')
+      } else {
+        console.log('Failed to send email, try sending email manually');
+        // Show error message to user
+        toast.error('Failed to send email, try sending email manually')
+      }
+    } catch (error) {
+      console.error('An error occurred', error);
+      // Show error message to user
+      toast.error('An error occurred')
+    }
   };
 
   return (
     <>
+    <Toaster richColors/>
       <main className="flex-1">
         <section className="relative flex min-h-[100dvh] flex-col items-center justify-center bg-gradient-to-br from-[#6b46c1] to-[#b794f4] px-4 py-12 sm:px-6 lg:px-8">
           {/* <div
